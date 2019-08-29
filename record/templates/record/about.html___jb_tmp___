@@ -1,0 +1,4 @@
+{% extends "record/base.html" %}
+{% block content %}
+<h1>asds</h1>
+{% endblock %}

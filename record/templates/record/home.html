@@ -1,0 +1,17 @@
+{% extends "record/base.html" %}
+{% block content %}
+{% for r in records %}
+<article class="media content-section">
+  <img class="rounded-circle article-img" src="{{ r.author.profile.image.url }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="#">{{ r.name }}</a>
+          <a class="mr-2" href="#">{{ r.last_name }}</a>
+     <small class="text-muted">{{ r.country }}</small>
+    </div>
+    <h2><a class="article-title" href="#">{{ r.program }}</a></h2>
+    <p class="article-content">{{ r.date_posted|date:"F d, Y" }}</p>
+  </div>
+</article>
+{% endfor %}
+{% endblock %}
